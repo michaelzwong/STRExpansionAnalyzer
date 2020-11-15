@@ -11,5 +11,7 @@ As well, they have been strongly linked to more complex disorders like autism sp
 
 ## References
 [1]: Gemayel, R., Vinces MD., Legendre, M., Verstrepen, K.J.. Variable tandem repeats accelerate evolution of coding and regulatory sequences. Annu Rev Genet 44, 445–77 (2010).
+
 [2]:López Castel, A., Cleary, J. D. & Pearson, C. E. Repeat instability as the basis for human diseases and as a potential target for therapy. Nat. Rev. Mol. Cell Biol. 11, 165–170 (2010).
+
 [3]: Trost, B., Engchuan, W., Nguyen, C.M. et al. Genome-wide detection of tandem DNA repeats that are expanded in autism. Nature 586, 80–86 (2020). https://doi.org/10.1038/s41586-020-2579-z
