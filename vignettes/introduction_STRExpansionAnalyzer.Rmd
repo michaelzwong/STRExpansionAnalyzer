@@ -1,0 +1,41 @@
+---
+title: "An Overview of STRExpansionAnalyzer"
+author: "Michael Wong"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{An Overview of STRExpansionAnalyzer}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Overview
+This package was created for users to find out more information in
+about size and motif distributions in their short tandem repeat (STR) dataset
+and label the STR loci as either variable or not variable.
+
+# Workflow
+1. Get a text file containing chromosome positions of STRs from a genome. The
+sample file str_data.txt in the data folder contains STRs from the hg38 human genome.
+
+2. Load the data in the text file into a dataframe using `readIntoDF()`
+3. Create measure variables and label each STR locus as variable or not using
+`createVariables()`
+4. Use the result dataframe to do your own analysis or use one of the 4 given
+functions (`plotMotifsDistribution()`, `plotTopNMostVariableMotifs()`, `plotTopNLeastVariableMotifs`, `plotTopNCommonMotifs()`) to plot out data.
+
+# Sample Workflow
+
+```{eval=TRUE, echo=TRUE}
+  mydf <- STRExpansionAnalyzer::loadIntoDF("data/str_data.txt")
+  mydf <- STRExpansionAnalyzer::createVariables(mydf)
+```
