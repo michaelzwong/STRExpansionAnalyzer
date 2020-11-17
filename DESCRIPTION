@@ -1,0 +1,23 @@
+Package: STRExpansionAnalyzer
+Type: Package
+Title: Short tandem repeat labeller and motif data plotter.
+Version: 0.1.0
+Authors@R: person("Michael", "Wong", email = "michaelz.wong@mail.utoronto.ca", role = c("aut", "cre"))
+Maintainer: Michael Wong <michaelz.wong@mail.utoronto.ca>
+Description: Tool for analyzing short tandem repeat (STR) datasets and labelling STR loci as variable or stable.
+License: MIT + file LICENSE
+Depends: R (>= 3.1.0)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
+URL: https://github.com/michaelzwong/STRExpansionAnalyzer
+Imports: 
+    ggplot2,
+    readr
+Remotes:michaelzwong/MPLNClust
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
