@@ -55,5 +55,9 @@ citation("STRExpansionAnalyzer")
 ## Maintainer
 * Michael Wong (michaelz.wong@mail.utoronto.ca)
 
+## Acknowledgements
+
+This package was developed as part of an assessment for 2020 BCB410H: Applied Bioinformatics, University of Toronto, Toronto, CANADA
+
 ## Contributions
 * This package welcomes issues, improvement requests, and contributions. Please use [Issues](https://github.com/michaelzwong/STRExpansionAnalyzer/issues) section
