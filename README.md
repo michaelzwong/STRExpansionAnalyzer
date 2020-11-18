@@ -34,6 +34,22 @@ sd, use: *createVariables*.
 To graph distribution, see common/least common motifs, or to see variable or 
 least variable motifs, use the graphing functions: *plotMotifsDistribution*, *plotTopNCommonMotifs*, *plotTopNLeastVariableMotifs*, *plotTopNMostVariableMotifs*.
 
+*plotMotifsDistribution*
+![count_distribution](https://github.com/michaelzwong/STRExpansionAnalyzer/blob/main/inst/extdata/motif_count_distribution.png)
+![density_distribution](https://github.com/michaelzwong/STRExpansionAnalyzer/blob/main/inst/extdata/motif_density_distribution.png)
+
+*plotTopNMostCommonMotifs*
+![most_common](https://github.com/michaelzwong/STRExpansionAnalyzer/blob/main/inst/extdata/most_common_mofits.png)
+
+*plotTopNLeastVariableMotifs
+![least_variable](https://github.com/michaelzwong/STRExpansionAnalyzer/blob/main/inst/extdata/least_variable_motifs.png)
+
+*plotTopNMostVariableMotifs*
+![most_variable](https://github.com/michaelzwong/STRExpansionAnalyzer/blob/main/inst/extdata/most_variable_motifs.png)
+
+
+
+
 ## Tutorials
 ```
 browseVignettes("STRExpansionAnalyzer")
