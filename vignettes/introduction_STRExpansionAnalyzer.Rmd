@@ -79,6 +79,7 @@ The outputs of the graphs are shown below as examples.
 <img src="../inst/extdata/least_variable_motifs.png" height="400px" width="800px"/>
 <img src="../inst/extdata/most_variable_motifs.png" height="400px" width="800px"/>
 <img src="../inst/extdata/motif_count_distribution.png" height="400px" width="800px"/>
+<img src="../inst/extdata/motif_density_distribution.png" height="400px" width="800px"/>
 
 
 # References
