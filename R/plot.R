@@ -101,12 +101,12 @@ plotTopNCommonMotifs <- function(df, num, stacked=FALSE) {
   if(!is.data.frame(df)) {
     stop("df must be a data frame")
   }
-  topNMotifs <- tail(names(sort(table(DF$motif))), num)
+  topNMotifs <- tail(names(sort(table(df$motif))), num)
 
   # Build filter condition
   condition <- FALSE
   for(motif in topNMotifs) {
-    condition <- condition | DF$motif==motif
+    condition <- condition | df$motif==motif
   }
 
   # Apply filters
@@ -173,11 +173,11 @@ plotTopNMostVariableMotifs <- function(df, num) {
   # Build filter condition
   condition <- FALSE
   for(motif in topNMostVariableMotifs) {
-    condition <- condition | DF$motif==motif
+    condition <- condition | df$motif==motif
   }
 
   # Apply filters
-  filteredDF <- DF[condition,]
+  filteredDF <- df[condition,]
 
   title <- paste("Top", toString(num),
                  "Most Variable Motifs", sep=" ")
@@ -232,11 +232,11 @@ plotTopNLeastVariableMotifs <- function(df, num) {
   # Build filter condition
   condition <- FALSE
   for(motif in topNMostVariableMotifs) {
-    condition <- condition | DF$motif==motif
+    condition <- condition | df$motif==motif
   }
 
   # Apply filters
-  filteredDF <- DF[condition,]
+  filteredDF <- df[condition,]
 
   title <- paste("Top", toString(num),
                  "Least Variable Motifs", sep=" ")
