@@ -3,8 +3,8 @@
 ## Background Information
 Short tandem repeats (STRs) are tracts of repetitive DNA. Typically, they are
 short sequences of 2-6 nucleotides repeated adjacently two or more times in a head
-to tail manner. STR loci are prone to mutations and high rates of polymorphism<sup>1</sup>. Expansions
-of STR loci can be pathogenic and have been attributed to more than 40 Mendelian diseases<sup>2</sup>.
+to tail manner<sup>3</sup>. STR loci are prone to mutations and high rates of polymorphism<sup>1</sup>. Expansions
+of STR loci can be pathogenic and have been attributed to more than 40 Mendelian diseases<sup>2,4</sup>.
 As well, they have been strongly linked to more complex disorders like autism spectrum syndrome<sup>3</sup>.
 
 ## Description
