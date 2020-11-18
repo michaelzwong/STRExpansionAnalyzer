@@ -83,21 +83,17 @@ createVariables <- function(df, zscore) {
   df$size.sd <- with(df, ave(size, motif, FUN=sd))
 
   # Calculate z-score (# of sd away from mean) of each individual motif
-  df$size.zscore <- with(df, ave(size, motif, FUN=getZScore))
-
-  getZScore <- function(x) {
+  df$size.zscore <- with(df, ave(size, motif, FUN=function(x) {
     return ((x - mean(x)) / sd(x))
-  }
+  }))
 
   # Calculate the total count for each type of motif
   df$motif.totalcount <- as.numeric(ave(motif, motif, FUN=length))
 
   # Calculate if a STR is "variable" or not based on z-score provided by user
-  df$variable <- with(df, ave(size.zscore, FUN=isVariable))
-
-  isVariable <- function(x) {
+  df$variable <- with(df, ave(size.zscore, FUN=function(x) {
     return(ifelse(abs(x) <= zscore, FALSE, TRUE))
-  }
+  }))
 
   # Calculate the total number of "variable" STR loci for each type of motif
   df$variable.total <- with(df, ave(variable, motif, FUN=sum))
