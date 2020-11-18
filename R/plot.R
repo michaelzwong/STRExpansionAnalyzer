@@ -24,6 +24,9 @@
 #' H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
 #' New York, 2016.
 #'
+#'@export
+#'@import ggplot2
+#'
 plotMotifsDistribution <- function(df, motifsList, count=TRUE) {
   if(typeof(motifsList) != "character") {
     stop("motif must be a character containing DNA bases: A, T, G, C")
@@ -83,6 +86,9 @@ plotMotifsDistribution <- function(df, motifsList, count=TRUE) {
 #'
 #' H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
 #' New York, 2016.
+#'
+#'@export
+#'@import ggplot2
 #'
 plotTopNCommonMotifs <- function(df, num, stacked=FALSE) {
   num <- as.integer(num)
@@ -146,6 +152,9 @@ plotTopNCommonMotifs <- function(df, num, stacked=FALSE) {
 #' H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
 #' New York, 2016.
 #'
+#'@export
+#'@import ggplot2
+#'
 plotTopNMostVariableMotifs <- function(df, num) {
   num <- as.integer(num)
   if(num < 1) {
@@ -201,6 +210,9 @@ plotTopNMostVariableMotifs <- function(df, num) {
 #'
 #' H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
 #' New York, 2016.
+#'
+#'@export
+#'@import ggplot2
 #'
 plotTopNLeastVariableMotifs <- function(df, num) {
   num <- as.integer(num)
