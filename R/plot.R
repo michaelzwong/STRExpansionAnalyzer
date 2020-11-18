@@ -18,6 +18,9 @@
 #' mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
 #' plotMotifsDistribution(mydf, c("AGG", "AC"))
 #'
+#' # Plot out the distribution density
+#' plotMotifsDistribution(mydf, c("AGG", "AC"), count=FALSE)
+#'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
 #' computing. R Foundation for Statistical Computing, Vienna,
@@ -82,6 +85,8 @@ plotMotifsDistribution <- function(df, motifsList, count=TRUE) {
 #' data("ShortTandemRepeatsLoci")
 #' mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
 #' plotTopNCommonMotifs(mydf, 5)
+#' # Plot out stacked version of same graph
+#' plotTopNCommonMotifs(mydf, 5, stacked=TRUE)
 #'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical

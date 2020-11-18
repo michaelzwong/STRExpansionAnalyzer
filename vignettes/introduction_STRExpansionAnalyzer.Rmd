@@ -62,8 +62,12 @@ functions (`plotMotifsDistribution()`, `plotTopNMostVariableMotifs()`, `plotTopN
 ```{eval=TRUE, echo=TRUE}
   # plot top 5 most common motifs
   STRExpansionAnalyzer::plotTopNCommonMotifs(mydf, 5)
-  # plot size distribution of motifs ATAT and GC
-  STRExpansionAnalyzer::plotMotifsDistribution(mydf, c("ATAT","GC"))
+  # plot top 5 most common motifs with stacked style plot
+  STRExpansionAnalyzer::plotTopNCommonMotifs(mydf, 5, stacked=TRUE)
+  # plot size distribution of motifs ATAT and AT
+  STRExpansionAnalyzer::plotMotifsDistribution(mydf, c("ATAT","AT"))
+  # plot density distribution of motifs ATAT and AT
+  STRExpansionAnalyzer::plotMotifsDistribution(mydf, c("ATAT","AT"), count=FALSE)
   # plot top 5 least variable motifs
   STRExpansionAnalyzer::plotTopNLeastVariableMotifs(mydf, 5)
   # plot top 5 most variable motifs
