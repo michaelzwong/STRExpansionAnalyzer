@@ -26,31 +26,55 @@ and label the STR loci as either variable or not variable.
 # Datasets
 1. There is 1 dataset containing short tandem repeats in the GRCH38 human genome assembly (Genome Reference Consortium Human Build 38)^1,2^. The dataset was obtained in a separate workflow by running the ExpansionHunter^3,4^ algorithm on tandem repeats identified by Tandem Repeats Finder^5^ program as part of research on short tandem repeat expansions^7,8^. Note that this separate workflow is an intensive CPU task usually done on a cloud computer platform.
 
-2. You can also choose to provide your own dataset of short tandem repeats in any the genome of any species. Ensure that the dataset is in a .txt file each STR is of the format chr<number>:<start_position>-<end_position>:<motif> and are separated by "\t" tabs. 
+2. You can also choose to provide your own dataset of short tandem repeats in any the genome of any species. Ensure that the dataset is in a .txt file each STR is of the format chrNUMBER:STARTPOSITION-ENDPOSITION:MOTIF and are separated by tabs. 
 
 # Workflow
 
 1. Get a text file containing chromosome positions of STRs from a genome. The
 sample file str_data.txt in the inst/extdata folder contains STRs from the hg38 human genome^1,2^. You can use that with the system.file command below.
-
 2. Load the data in the text file into a dataframe using `readIntoDF()`
 3. Create measure variables and label each STR locus as variable or not using
-`createVariables()`
+`createVariables()`. The zscore you specify here will determine how each locus will be
+labelled. Feel free to play around, but typically use a zscore <= 0.1.
 
 ```{eval=TRUE, echo=TRUE}
+  # step 1
   fpath <- system.file("extdata", "str_data.txt", package="STRExpansionAnalyzer")
+  # step 2
   mydf <- STRExpansionAnalyzer::loadIntoDF(fpath)
-  mydf <- STRExpansionAnalyzer::createVariables(mydf)
+  # step 3
+  mydf <- STRExpansionAnalyzer::createVariables(mydf, 0.1)
 ```
 
-4. Use the result dataframe to do your own analysis. In the dataframe we have columns: 
-use one of the 4 given
-functions (`plotMotifsDistribution()`, `plotTopNMostVariableMotifs()`, `plotTopNLeastVariableMotifs`, `plotTopNCommonMotifs()`) to plot out data.
+Alternative to steps 1-3. You can also use the dataset provided in the package. This is the same
+data as the one in str_data.txt above.
 
 ```{eval=TRUE, echo=TRUE}
-  mydf <- STRExpansionAnalyzer::loadIntoDF("data/str_data.txt")
-  mydf <- STRExpansionAnalyzer::createVariables(mydf)
+  # step 1 and 2. Loads the dataset into variable ShortTandemRepeatsLoci
+  data("ShortTandemRepeatsLoci")
+  # step 3
+  mydf <- STRExpansionAnalyzer::createVariables(ShortTandemRepeatsLoci, 0.1)
 ```
+
+4. Use the result dataframe to do your own analysis. or you can use some of the visualization
+functions (`plotMotifsDistribution()`, `plotTopNMostVariableMotifs()`, `plotTopNLeastVariableMotifs`, `plotTopNCommonMotifs()`) provided
+
+```{eval=TRUE, echo=TRUE}
+  # plot top 5 most common motifs
+  STRExpansionAnalyzer::plotTopNCommonMotifs(mydf, 5)
+  # plot size distribution of motifs ATAT and GC
+  STRExpansionAnalyzer::plotMotifsDistribution(mydf, c("ATAT","GC"))
+  # plot top 5 least variable motifs
+  STRExpansionAnalyzer::plotTopNLeastVariableMotifs(mydf, 5)
+  # plot top 5 most variable motifs
+  STRExpansionAnalyzer::plotTopNMostVariableMotifs(mydf, 5)
+```
+
+The outputs of the graphs are shown below as examples.
+
+<img src="../inst/extdata/least_variable_motifs.png" height="400px" width="800px"/>
+<img src="../inst/extdata/most_variable_motifs.png" height="400px" width="800px"/>
+<img src="../inst/extdata/motif_count_distribution.png" height="400px" width="800px"/>
 
 
 # References
