@@ -88,7 +88,7 @@ createVariables <- function(df, zscore) {
   }))
 
   # Calculate the total count for each type of motif
-  df$motif.totalcount <- as.numeric(ave(motif, motif, FUN=length))
+  df$motif.totalcount <- as.numeric(with(df, ave(motif, motif, FUN=length)))
 
   # Calculate if a STR is "variable" or not based on z-score provided by user
   df$variable <- with(df, ave(size.zscore, FUN=function(x) {

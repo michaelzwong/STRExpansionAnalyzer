@@ -31,18 +31,19 @@ and label the STR loci as either variable or not variable.
 # Workflow
 
 1. Get a text file containing chromosome positions of STRs from a genome. The
-sample file str_data.txt in the data folder contains STRs from the hg38 human genome^1,2^.
+sample file str_data.txt in the inst/extdata folder contains STRs from the hg38 human genome^1,2^. You can use that with the system.file command below.
 
 2. Load the data in the text file into a dataframe using `readIntoDF()`
 3. Create measure variables and label each STR locus as variable or not using
 `createVariables()`
 
 ```{eval=TRUE, echo=TRUE}
-  mydf <- STRExpansionAnalyzer::loadIntoDF("data/str_data.txt")
+  fpath <- system.file("extdata", "str_data.txt", package="STRExpansionAnalyzer")
+  mydf <- STRExpansionAnalyzer::loadIntoDF(fpath)
   mydf <- STRExpansionAnalyzer::createVariables(mydf)
 ```
 
-4. Use the result dataframe to do your own analysis. In the dataframe we have columns:
+4. Use the result dataframe to do your own analysis. In the dataframe we have columns: 
 use one of the 4 given
 functions (`plotMotifsDistribution()`, `plotTopNMostVariableMotifs()`, `plotTopNLeastVariableMotifs`, `plotTopNCommonMotifs()`) to plot out data.
 
