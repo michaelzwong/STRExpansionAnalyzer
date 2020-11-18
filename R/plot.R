@@ -110,7 +110,7 @@ plotTopNCommonMotifs <- function(df, num, stacked=FALSE) {
   }
 
   # Apply filters
-  filteredDF <- DF[condition,]
+  filteredDF <- df[condition,]
 
   title <- paste("Variable vs Stable STRs of Top", toString(num),
                   "Common Motifs", sep=" ")
