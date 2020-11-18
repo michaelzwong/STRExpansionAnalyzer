@@ -10,8 +10,9 @@
 #' @return Returns a dataframe with columns `chr`, `start`, `end` and `motif`
 #'
 #' @examples
-#' # Load STR loci data from str_data.txt located in the data folder of root dir
-#' myDF <- readIntoDF("/data/str_data.txt")
+#' # Load STR loci data from str_data.txt located in the inst/extdata folder
+#' fpath <- system.file("extdata", "str_data.txt", package="STRExpansionAnalyzer")
+#' mydf <- readIntoDF(filepath)
 #'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
@@ -63,7 +64,9 @@ readIntoDF <- function(filepath) {
 #'
 #' @examples
 #' # Update dataframe with additional columns and labeled loci
-#' df <- createVariables(df, 0.1)
+#' data("ShortTandemRepeatsLoci")
+#' mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+#'
 #'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical

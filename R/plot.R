@@ -14,7 +14,9 @@
 #'
 #' @examples
 #' # Plot out the distribution size of motifs "AGG", "AC"
-#' plotMotifsDistribution(df, c("AGG", "AC"))
+#' data("ShortTandemRepeatsLoci")
+#' mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+#' plotMotifsDistribution(mydf, c("AGG", "AC"))
 #'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
@@ -77,7 +79,9 @@ plotMotifsDistribution <- function(df, motifsList, count=TRUE) {
 #'
 #' @examples
 #' # Plot out the top 5 most common motifs
-#' plotTopNCommonMotifs(df, 5)
+#' data("ShortTandemRepeatsLoci")
+#' mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+#' plotTopNCommonMotifs(mydf, 5)
 #'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
@@ -142,7 +146,9 @@ plotTopNCommonMotifs <- function(df, num, stacked=FALSE) {
 #'
 #' @examples
 #' # Plot out the top 5 most variable motifs
-#' plotTopNMostVariableMotifs(df, 5)
+#' data("ShortTandemRepeatsLoci")
+#' mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+#' plotTopNMostVariableMotifs(mydf, 5)
 #'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
@@ -201,7 +207,9 @@ plotTopNMostVariableMotifs <- function(df, num) {
 #'
 #' @examples
 #' # Plot out the top 5 least variable motifs
-#' plotTopNMostVariableMotifs(df, 5)
+#' data("ShortTandemRepeatsLoci")
+#' mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+#' plotTopNMostVariableMotifs(mydf, 5)
 #'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical

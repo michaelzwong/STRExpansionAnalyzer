@@ -41,7 +41,7 @@ labelled. Feel free to play around, but typically use a zscore <= 0.1.
   # step 1
   fpath <- system.file("extdata", "str_data.txt", package="STRExpansionAnalyzer")
   # step 2
-  mydf <- STRExpansionAnalyzer::loadIntoDF(fpath)
+  mydf <- STRExpansionAnalyzer::readIntoDF(fpath)
   # step 3
   mydf <- STRExpansionAnalyzer::createVariables(mydf, 0.1)
 ```
