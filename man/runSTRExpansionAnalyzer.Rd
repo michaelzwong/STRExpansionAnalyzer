@@ -18,6 +18,11 @@ runSTRExpansionAnalyzer()
 }
 
 }
+\references{
+Winston Chang, Joe Cheng, JJ Allaire, Yihui Xie and Jonathan McPherson
+(2020). shiny: Web Application Framework for R. R package version 1.5.0.
+https://CRAN.R-project.org/package=shiny
+}
 \author{
 Michael Wong, \email{michaelz.wong@mail.utoronto.ca}
 }
