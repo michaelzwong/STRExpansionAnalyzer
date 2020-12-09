@@ -36,7 +36,7 @@ To install:
 
 To run Shiny app:
 
-    runSTRExpansionAnalyzer()
+    STRExpansionAnalyzer::runSTRExpansionAnalyzer()
 
 ## Overview
 

@@ -39,7 +39,7 @@ library("STRExpansionAnalyzer")
 
 To run Shiny app:
 ```
-runSTRExpansionAnalyzer()
+STRExpansionAnalyzer::runSTRExpansionAnalyzer()
 ```
 
 ## Overview
