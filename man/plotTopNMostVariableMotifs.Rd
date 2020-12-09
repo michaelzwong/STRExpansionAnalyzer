@@ -21,7 +21,9 @@ variables, a number N and plots out the top N most variable motifs
 }
 \examples{
 # Plot out the top 5 most variable motifs
-plotTopNMostVariableMotifs(df, 5)
+data("ShortTandemRepeatsLoci")
+mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+plotTopNMostVariableMotifs(mydf, 5)
 
 }
 \references{

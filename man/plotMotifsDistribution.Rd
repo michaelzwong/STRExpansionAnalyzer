@@ -25,7 +25,12 @@ size with either count or density on the y axis.
 }
 \examples{
 # Plot out the distribution size of motifs "AGG", "AC"
-plotMotifsDistribution(df, c("AGG", "AC"))
+data("ShortTandemRepeatsLoci")
+mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+plotMotifsDistribution(mydf, c("AGG", "AC"))
+
+# Plot out the distribution density
+plotMotifsDistribution(mydf, c("AGG", "AC"), count=FALSE)
 
 }
 \references{

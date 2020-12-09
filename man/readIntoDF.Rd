@@ -20,8 +20,9 @@ For example, chr16:10000-11000:AT or chrX:900000-900100:TCTC.
 These loci are separated by a tab space or new line.
 }
 \examples{
-# Load STR loci data from str_data.txt located in the data folder of root dir
-myDF <- readIntoDF("/data/str_data.txt")
+# Load STR loci data from str_data.txt located in the inst/extdata folder
+fpath <- system.file("extdata", "str_data.txt", package="STRExpansionAnalyzer")
+mydf <- readIntoDF(filepath)
 
 }
 \references{

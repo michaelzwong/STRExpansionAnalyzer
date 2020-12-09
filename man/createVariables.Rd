@@ -28,7 +28,9 @@ standard deviations of the mean motif size, will be lablled variable.
 }
 \examples{
 # Update dataframe with additional columns and labeled loci
-df <- createVariables(df, 0.1)
+data("ShortTandemRepeatsLoci")
+mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+
 
 }
 \references{
