@@ -8,10 +8,10 @@ ui <- fluidPage(
   sidebarPanel(
     # Specify the standard deviation to calculate motifs
     numericInput(inputId="sd",
-                 label="Standard Deviation",
+                 label="Z-Score (Max: 3)",
                  value=0.1,
                  min=0,
-                 max=2,
+                 max=3,
                  step=0.05),
 
     selectInput(inputId="plotType",
@@ -60,7 +60,7 @@ ui <- fluidPage(
 server <- function(input, output) {
   mydf <- reactive({
     data("ShortTandemRepeatsLoci")
-    createVariables(df=ShortTandemRepeatsLoci, input$sd)
+    STRExpansionAnalyzer::createVariables(df=ShortTandemRepeatsLoci, input$sd)
   })
   output$plot <- renderPlot({
     if(input$plotType == 'Motif Distribution') {
