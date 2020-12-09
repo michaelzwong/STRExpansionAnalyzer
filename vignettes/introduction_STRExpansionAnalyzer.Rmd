@@ -78,6 +78,10 @@ functions (`plotMotifsDistribution()`, `plotTopNMostVariableMotifs()`, `plotTopN
   STRExpansionAnalyzer::plotTopNMostVariableMotifs(mydf, 5)
 ```
 
+```{eval=TRUE, echo=TRUE}
+  sessionInfo() 
+```
+
 The outputs of the graphs are shown below as examples.
 
 <img src="../inst/extdata/least_variable_motifs.png" height="400px" width="800px"/>
