@@ -27,7 +27,7 @@ ui <- fluidPage(
                                  label="Distribution Type",
                                  choices=c("Count","Density")),
                      textInput(inputId="motif",
-                               label="Motifs (Seperate each motif by , )",
+                               label="Motifs (Seperate each motif by space )",
                                value="ATAT TAG")),
     # Common motifs graph
     conditionalPanel(condition="input.plotType == 'Common Motifs'",
