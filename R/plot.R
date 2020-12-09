@@ -83,7 +83,8 @@ plotMotifsDistribution <- function(df, motifsList, count=TRUE) {
 #' @examples
 #' # Plot out the top 5 most common motifs
 #' data("ShortTandemRepeatsLoci")
-#' mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+#' head("ShortTandemRepeatsLoci")
+#' mydf <- createVariables(df = ShortTandemRepeatsLoci, 0.1)
 #' plotTopNCommonMotifs(mydf, 5)
 #' # Plot out stacked version of same graph
 #' plotTopNCommonMotifs(mydf, 5, stacked=TRUE)
@@ -152,7 +153,8 @@ plotTopNCommonMotifs <- function(df, num, stacked=FALSE) {
 #' @examples
 #' # Plot out the top 5 most variable motifs
 #' data("ShortTandemRepeatsLoci")
-#' mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+#' head("ShortTandemRepeatsLoci")
+#' mydf <- createVariables(df = ShortTandemRepeatsLoci, 0.1)
 #' plotTopNMostVariableMotifs(mydf, 5)
 #'
 #' @references
@@ -213,7 +215,8 @@ plotTopNMostVariableMotifs <- function(df, num) {
 #' @examples
 #' # Plot out the top 5 least variable motifs
 #' data("ShortTandemRepeatsLoci")
-#' mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+#' head("ShortTandemRepeatsLoci")
+#' mydf <- createVariables(df = ShortTandemRepeatsLoci, 0.1)
 #' plotTopNMostVariableMotifs(mydf, 5)
 #'
 #' @references

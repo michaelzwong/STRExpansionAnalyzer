@@ -52,14 +52,18 @@ data as the one in str_data.txt above.
 ```{eval=TRUE, echo=TRUE}
   # step 1 and 2. Loads the dataset into variable ShortTandemRepeatsLoci
   data("ShortTandemRepeatsLoci")
+  head("ShortTandemRepeatsLoci")
   # step 3
-  mydf <- STRExpansionAnalyzer::createVariables(ShortTandemRepeatsLoci, 0.1)
+  mydf <- STRExpansionAnalyzer::createVariables(df = ShortTandemRepeatsLoci, 0.1)
 ```
 
 4. Use the result dataframe to do your own analysis. or you can use some of the visualization
 functions (`plotMotifsDistribution()`, `plotTopNMostVariableMotifs()`, `plotTopNLeastVariableMotifs`, `plotTopNCommonMotifs()`) provided
 
 ```{eval=TRUE, echo=TRUE}
+  data("ShortTandemRepeatsLoci")
+  head("ShortTandemRepeatsLoci")
+  mydf <- STRExpansionAnalyzer::createVariables(df = ShortTandemRepeatsLoci, 0.1)
   # plot top 5 most common motifs
   STRExpansionAnalyzer::plotTopNCommonMotifs(mydf, 5)
   # plot top 5 most common motifs with stacked style plot

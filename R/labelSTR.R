@@ -65,7 +65,8 @@ readIntoDF <- function(filepath) {
 #' @examples
 #' # Update dataframe with additional columns and labeled loci
 #' data("ShortTandemRepeatsLoci")
-#' mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+#' head("ShortTandemRepeatsLoci")
+#' mydf <- createVariables(df = ShortTandemRepeatsLoci, 0.1)
 #'
 #'
 #' @references
