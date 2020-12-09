@@ -26,7 +26,8 @@ the proportion of variable vs non variable STR loci.
 \examples{
 # Plot out the top 5 most common motifs
 data("ShortTandemRepeatsLoci")
-mydf <- createVariables(ShortTandemRepeatsLoci, 0.1)
+head("ShortTandemRepeatsLoci")
+mydf <- createVariables(df = ShortTandemRepeatsLoci, 0.1)
 plotTopNCommonMotifs(mydf, 5)
 # Plot out stacked version of same graph
 plotTopNCommonMotifs(mydf, 5, stacked=TRUE)
