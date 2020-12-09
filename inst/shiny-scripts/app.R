@@ -59,7 +59,7 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   mydf <- reactive({
-    createVariables(df=ShortTandemRepeatsLoci, input$sd)
+    createVariables(df=STRExpansionAnalyzer::ShortTandemRepeatsLoci, input$sd)
   })
   output$plot <- renderPlot({
     if(input$plotType == 'Motif Distribution') {
